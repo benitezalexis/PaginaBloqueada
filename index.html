@@ -32,7 +32,7 @@
     // Desactivar el clic derecho
     document.addEventListener("contextmenu", function(e) {
       e.preventDefault();
-      alert("No sean mirones XD");
+      alert("acceso no permitido");
     }, false);
 
     // Bloquear teclas de acceso a herramientas de desarrollo
@@ -40,17 +40,17 @@
       // Bloquear F12
       if (e.key === "F12") {
         e.preventDefault();
-        alert("No sean mirones XD");
+        alert("acceso no permitido");
       }
       // Bloquear Ctrl + Shift + I (Acceso a las herramientas de desarrollo en la mayoría de navegadores)
       if (e.ctrlKey && e.shiftKey && e.key === "I") {
         e.preventDefault();
-        alert("No sean mirones XD");
+        alert("acceso no permitido");
       }
       // Bloquear Ctrl + U (ver el código fuente)
       if (e.ctrlKey && e.key === "u") {
         e.preventDefault();
-        alert("No sean mirones XD");
+        alert("acceso no permitido");
       }
     }, false);
   </script>
