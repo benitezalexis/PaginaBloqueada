@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página con Bloqueo de Inspector</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    p {
+      font-size: 18px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Página con Protección Básica</h1>
+  <p>El clic derecho está deshabilitado, y algunas teclas de acceso a herramientas de desarrollo están bloqueadas.</p>
+
+  <p>Esta es una simple página de demostración.</p>
+
+  <script>
+    // Desactivar el clic derecho
+    document.addEventListener("contextmenu", function(e) {
+      e.preventDefault();
+      alert("No sean mirones XD");
+    }, false);
+
+    // Bloquear teclas de acceso a herramientas de desarrollo
+    document.addEventListener("keydown", function(e) {
+      // Bloquear F12
+      if (e.key === "F12") {
+        e.preventDefault();
+        alert("No sean mirones XD");
+      }
+      // Bloquear Ctrl + Shift + I (Acceso a las herramientas de desarrollo en la mayoría de navegadores)
+      if (e.ctrlKey && e.shiftKey && e.key === "I") {
+        e.preventDefault();
+        alert("No sean mirones XD");
+      }
+      // Bloquear Ctrl + U (ver el código fuente)
+      if (e.ctrlKey && e.key === "u") {
+        e.preventDefault();
+        alert("No sean mirones XD");
+      }
+    }, false);
+  </script>
+
+</body>
+</html>
